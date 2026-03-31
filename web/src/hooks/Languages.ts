@@ -252,7 +252,7 @@ export const TRANSLATIONS: Translations = {
       privacyPolicy: "კონფიდენციალურობის პოლიტიკა",
       contact: "კონტაქტი",
       address: "მისამართი: თბილისი, საქართველო",
-      email: "ელ-ფოსტა: info@russanafordire.com",
+      email: "ელ-ფოსტა: info@galakids.ge",
       phone: "ტელეფონი: +995 599 546 494",
       socialMedia: "სოციალური ქსელები",
       follow: "მოგვყევით",
@@ -263,12 +263,11 @@ export const TRANSLATIONS: Translations = {
       beforeYouLeave: "სანამ წახვალ დააპიპინეეე!!!",
     },
     home: {
-      heroTitle: "შეარჩიე ხელოვანების პროდუქტები ან გაყიდე შენი 🖌️",
-      heroSubtitle:
-        "პერსონალური და ხელნაკეთი პროდუქტები ქართველი ხელოვანებისგან",
+      heroTitle: "აღმოაჩინეთ ბავშვების საუკეთესო ტანსაცმელი 👶",
+      heroSubtitle: "მაღალი ხარისხის ბავშვის ტანსაცმელი და სწრაფი მიწოდება",
       mostPopular: "ყველაზე პოპულარული",
-      welcomeMessage: "მოგესალმებით საპიპინეთშიიიიიიიი !!!",
-      pipSound: "პიიიპ პიიიიპ!",
+      welcomeMessage: "მობრძანდით GalaKids-ში!",
+      pipSound: "⭐ სტილი პატარებისთვის ⭐",
     },
 
     // Timer translations
@@ -881,7 +880,7 @@ export const TRANSLATIONS: Translations = {
       privacyPolicy: "Privacy Policy",
       contact: "Contact",
       address: "Address: Tbilisi, Georgia",
-      email: "Email: info@russana.ge",
+      email: "Email: info@galakids.ge",
       phone: "Phone: +995 XXX XXX XXX",
       socialMedia: "Social Media",
       follow: "Follow us",
@@ -894,8 +893,8 @@ export const TRANSLATIONS: Translations = {
 
     home: {
       mostPopular: "Most Popular",
-      welcomeMessage: "Welcome to Pipiii World !!!",
-      pipSound: "Piip Piip!",
+      welcomeMessage: "Welcome to GalaKids!",
+      pipSound: "⭐ Style for little ones ⭐",
     },
 
     // Timer translations

@@ -25,17 +25,17 @@ async function bootstrap() {
   app.enableCors({
     origin: (origin, callback) => {
       const allowedOrigins = [
-        'https://www.russana.vercel.app',
-        'https://russana.vercel.app',
-        'https://russanafordire.com',
-        'https://russanafordire.com/home',
-        'https://www.russanafordire.com/home',
-        'https://www.russanafordire.com',
-        'https://russana.vercel.app/home',
-        'https://russana-web.vercel.app', // Add this
-        'https://www.russana-web.vercel.app', // Add this
-        'https://russana-git-main-aberoshvilis-projects.vercel.app', // Add preview URLs
-        'https://russana-aberoshvilis-projects.vercel.app', // Add preview URLs
+        'https://www.GalaKids.vercel.app',
+        'https://GalaKids.vercel.app',
+        'https://galakids.ge',
+        'https://galakids.ge/home',
+        'https://www.galakids.ge/home',
+        'https://www.galakids.ge',
+        'https://GalaKids.vercel.app/home',
+        'https://GalaKids-web.vercel.app',
+        'https://www.GalaKids-web.vercel.app',
+        'https://GalaKids-git-main-aberoshvilis-projects.vercel.app',
+        'https://GalaKids-aberoshvilis-projects.vercel.app',
         'http://localhost:3000',
         'https://localhost:3000',
         'http://localhost:4000',
@@ -107,8 +107,8 @@ async function bootstrap() {
   }
 
   const config = new DocumentBuilder()
-    .setTitle('Russana  API')
-    .setDescription('Russana E-commerce REST API')
+    .setTitle('GalaKids API')
+    .setDescription('GalaKids E-commerce REST API')
     .setVersion('1.0')
     .addBearerAuth()
     .build();

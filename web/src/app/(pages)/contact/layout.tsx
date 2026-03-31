@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "კონტაქტი | Contact",
   description:
-    "დაგვიკავშირდით RussanaForDire-ს გუნდს. ჩვენ მზად ვართ გიპასუხოთ თქვენს შეკითხვებს და მოგემსახუროთ საუკეთესო ხარისხით. | Contact RussanaForDire team. We are ready to answer your questions and provide the best service.",
+    "დაგვიკავშირდით GalaKids-ს გუნდს. ჩვენ მზად ვართ გიპასუხოთ თქვენს შეკითხვებს და მოგემსახუროთ საუკეთესო ხარისხით. | Contact GalaKids team. We are ready to answer your questions and provide the best service.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -32,30 +32,30 @@ export const metadata: Metadata = {
     "საკონტაქტო ინფორმაცია",
     "მხარდაჭერა",
     "მომსახურება",
-    "RussanaForDire",
+    "GalaKids",
     "contact",
     "support",
     "customer service",
   ],
   openGraph: {
-    title: "კონტაქტი - RussanaForDire | Contact - RussanaForDire",
+    title: "კონტაქტი - GalaKids | Contact - GalaKids",
     description:
       "დაგვიკავშირდით და მიიღეთ პროფესიონალური კონსულტაცია | Contact us and get professional consultation",
-    url: "https://russanaForDire.com/contact",
+    url: "https://galakids.ge/contact",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire კონტაქტი | Contact",
+        alt: "GalaKids კონტაქტი | Contact",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanaForDire.com/contact",
+    canonical: "https://galakids.ge/contact",
     languages: {
-      ka: "https://russanaForDire.com/contact",
-      en: "https://russanaForDire.com/en/contact",
+      ka: "https://galakids.ge/contact",
+      en: "https://galakids.ge/en/contact",
     },
   },
 };

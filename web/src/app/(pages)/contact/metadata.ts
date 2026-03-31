@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "კონტაქტი",
   description:
-    "დაგვიკავშირდით Russana-ს გუნდს. ჩვენ მზად ვართ უპასუხოთ თქვენს შეკითხვებს და გავგიხმოთ საუკეთესო სერვისით.",
+    "დაგვიკავშირდით GalaKids-ს გუნდს. ჩვენ მზად ვართ უპასუხოთ თქვენს შეკითხვებს და გავგიხმოთ საუკეთესო სერვისით.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     "საკონტაქტო ინფორმაცია",
     "მხარდაჭერა",
     "მომსახურება",
-    "Russana",
+    "GalaKids",
   ],
   openGraph: {
-    title: "კონტაქტი - Russana",
+    title: "კონტაქტი - GalaKids",
     description: "დაგვიკავშირდით და მიიღეთ პროფესიონალური კონსულტაცია",
-    url: "https://russana.ge/contact",
+    url: "https://galakids.ge/contact",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Russana კონტაქტი",
+        alt: "GalaKids კონტაქტი",
       },
     ],
   },
   alternates: {
-    canonical: "https://russana.ge/contact",
+    canonical: "https://galakids.ge/contact",
   },
 };

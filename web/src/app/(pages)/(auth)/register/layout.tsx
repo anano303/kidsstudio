@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "რეგისტრაცია | Register",
   description:
-    "შექმენით ანგარიში RussanaForDire-ზე და დაიწყეთ ონლაინ შოპინგი. მარტივი რეგისტრაცია და სწრაფი ყიდვა. | Create an account on RussanaForDire and start online shopping. Easy registration and fast shopping.",
+    "შექმენით ანგარიში GalaKids-ზე და დაიწყეთ ონლაინ შოპინგი. მარტივი რეგისტრაცია და სწრაფი ყიდვა. | Create an account on GalaKids and start online shopping. Easy registration and fast shopping.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "რეგისტრაცია",
     "ანგარიშის შექმნა",
     "საიტზე გამოწერა",
-    "RussanaForDire",
+    "GalaKids",
     "ახალი მომხმარებელი",
     "register",
     "create account",
@@ -39,24 +39,24 @@ export const metadata: Metadata = {
     "new user",
   ],
   openGraph: {
-    title: "რეგისტრაცია - RussanaForDire | Register - RussanaForDire",
+    title: "რეგისტრაცია - GalaKids | Register - GalaKids",
     description:
       "შექმენით ანგარიში და ისიამოვნეთ შოპინგით | Create account and enjoy shopping",
-    url: "https://russanaForDire.com/register",
+    url: "https://galakids.ge/register",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire რეგისტრაცია | Register",
+        alt: "GalaKids რეგისტრაცია | Register",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanaForDire.com/register",
+    canonical: "https://galakids.ge/register",
     languages: {
-      ka: "https://russanaForDire.com/register",
-      en: "https://russanaForDire.com/en/register",
+      ka: "https://galakids.ge/register",
+      en: "https://galakids.ge/en/register",
     },
   },
   robots: {

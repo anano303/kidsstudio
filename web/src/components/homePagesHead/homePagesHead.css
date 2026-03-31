@@ -4,8 +4,8 @@
   align-items: center;
   padding: 40px 0;
   box-shadow: -7px 6px 14px 5px #ffe5e8;
-  padding-bottom: 180px;
-  /* position: relative; */
+  padding-bottom: 80px;
+  overflow: visible;
 }
 .home-pages-head h1 {
   text-align: center;
@@ -21,8 +21,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  /* gap: 50px; */
+  justify-content: center;
+}
+
+.puzzle-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .logo-containerHome p {
@@ -32,7 +38,7 @@
   font-size: 36px;
   line-height: 100%;
   letter-spacing: 10%;
-  margin-top: 280px;
+  margin-top: 80px;
 }
 .large-logo {
   max-width: 100%;
@@ -48,8 +54,9 @@
 
 .main-slogan {
   font-size: 36px;
+  margin-bottom: 15px;
   font-weight: bold;
-  color: #e50000;
+  color: black;
   margin-bottom: 20px;
 }
 
@@ -115,17 +122,8 @@
 
 /* დიდი ეკრანებისთვის (1600px და მეტი) */
 @media (min-width: 1600px) {
-  .FlyingHeartWithWings-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
   .logo-containerHome {
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px; /* მაქსიმალური სიგანის შეზღუდვა */
-    margin: 0 auto; /* კონტეინერის ცენტრირება */
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }

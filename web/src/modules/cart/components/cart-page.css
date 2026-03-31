@@ -8,7 +8,7 @@
   font-family: 'Georgia', serif;
   color: #4a3f35;
   padding: 24px 40px;
-  background: url("/logo.png") no-repeat center center;
+  background: url("/logo.svg") no-repeat center center;
   background-size: 80% auto;
   position: relative;
   overflow: hidden;

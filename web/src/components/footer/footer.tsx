@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FacebookIcon, InstagramIcon, MailIcon } from "lucide-react";
-import logo from "../../assets/Images/Layer_1.png";
+import logo from "../../assets/Images/galakids-logo.svg";
 import { useLanguage } from "@/hooks/LanguageContext";
 import "./footer.css";
 
@@ -81,7 +81,7 @@ export default function Footer() {
                       <span className="social-name">Facebook</span>
                     </a>
                     <a
-                      href="https://www.instagram.com/russana_for_dire?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                      href="https://www.instagram.com/galakids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       className="social-icon-wrapper"
                       aria-label="Instagram"
                     >
@@ -94,7 +94,7 @@ export default function Footer() {
                       <span className="social-name">Instagram</span>
                     </a>
                     <a
-                      href="mailto:info@russanafordire.com"
+                      href="mailto:info@galakids.ge"
                       className="social-icon-wrapper"
                       aria-label="Email"
                     >
@@ -114,7 +114,7 @@ export default function Footer() {
                 <div className="footer-logo">
                   <Image
                     src={logo}
-                    alt="Russana Logo"
+                    alt="GalaKids Logo"
                     width={320}
                     height={190}
                     className="footer-logo-image"

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "კონფიდენციალურობის პოლიტიკა | Privacy Policy",
   description:
-    "RussanaForDire-ს კონფიდენციალურობის პოლიტიკა. გაიგეთ როგორ ვიცავთ და ვმუშავებთ თქვენს პირად ინფორმაციასთან. | RussanaForDire privacy policy. Learn how we protect and handle your personal information.",
+    "GalaKids-ს კონფიდენციალურობის პოლიტიკა. გაიგეთ როგორ ვიცავთ და ვმუშავებთ თქვენს პირად ინფორმაციასთან. | GalaKids privacy policy. Learn how we protect and handle your personal information.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -40,24 +40,24 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "კონფიდენციალურობის პოლიტიკა - RussanaForDire | Privacy Policy - RussanaForDire",
+      "კონფიდენციალურობის პოლიტიკა - GalaKids | Privacy Policy - GalaKids",
     description:
       "გაიგეთ როგორ ვიცავთ თქვენს პირად ინფორმაციას | Learn how we protect your personal information",
-    url: "https://russanaForDire.com/privacy-policy",
+    url: "https://galakids.ge/privacy-policy",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire კონფიდენციალურობის პოლიტიკა | Privacy Policy",
+        alt: "GalaKids კონფიდენციალურობის პოლიტიკა | Privacy Policy",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanaForDire.com/privacy-policy",
+    canonical: "https://galakids.ge/privacy-policy",
     languages: {
-      ka: "https://russanaForDire.com/privacy-policy",
-      en: "https://russanaForDire.com/en/privacy-policy",
+      ka: "https://galakids.ge/privacy-policy",
+      en: "https://galakids.ge/en/privacy-policy",
     },
   },
   robots: {

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/Images/Layer_1.png";
+import logo from "../../assets/Images/galakids-logo.svg";
 import { CartIcon } from "@/modules/cart/components/cart-icon";
 import "./header.scss";
 import UserMenu from "./user-menu";
@@ -75,7 +75,7 @@ export default function Header() {
               src={logo}
               width={125}
               height={80}
-              alt="Russana logo"
+              alt="GalaKids logo"
               className="header-logo"
             />
           </Link>

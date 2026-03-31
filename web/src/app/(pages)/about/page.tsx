@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import logo from "../../../assets/Images/Layer_1.png";
+import logo from "../../../assets/Images/galakids-logo.svg";
 import "./about.css";
 import creator1 from "./heart (1).png";
 import creator2 from "./heart (2).png";
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 src={logo}
                 width={300}
                 height={200}
-                alt="Russana logo"
+                alt="GalaKids logo"
                 className="about-logo"
               />
               {showParticles && (
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="about-text">
           <div className="brand-intro">
             <h2>
-              Russana for Dire -
+              GalaKids -
               <span>
                 ეს არის ბრენდი, რომელიც სიყვარულით, ხალისითა და ცოტაოდენი მაგიით
                 შეიქმნა.
@@ -81,7 +81,7 @@ export default function AboutPage() {
 
           <div className="about-section">
             <p>
-              ბრენდი Russana for Dire შეიქმნა ორი მეგობრის — მსახიობების რუსკა
+              ბრენდი GalaKids შეიქმნა ორი მეგობრის — მსახიობების რუსკა
               მაყაშვილისა და ლაშა ჯუხარაშვილის კოლაბორაციით. რომლებსაც ერთი
               მიზანი აერთიანებთ: შექმნან ტანსაცმელი და აქსესუარები, რომელიც არ
               აწესებს ჩარჩოებს და გაძლევს საშუალებას იყო ისეთი, როგორიც ხარ —
@@ -105,10 +105,10 @@ export default function AboutPage() {
 
           <div className="about-section">
             <p>
-              Russana for Dire არ არის მხოლოდ სტილი — ეს არის განწყობა, რომელიც
-              მოგყვება ყოველდღიურად. იქნება ეს ქუჩაში, სახლში, კაფეში თუ
-              სცენაზე, ჩვენი ლუქები გეხმარება, თავი იგრძნო კომფორტულად,
-              გამორჩეულად და თავდაჯერებულად.
+              GalaKids არ არის მხოლოდ სტილი — ეს არის განწყობა, რომელიც მოგყვება
+              ყოველდღიურად. იქნება ეს ქუჩაში, სახლში, კაფეში თუ სცენაზე, ჩვენი
+              ლუქები გეხმარება, თავი იგრძნო კომფორტულად, გამორჩეულად და
+              თავდაჯერებულად.
             </p>
           </div>
 

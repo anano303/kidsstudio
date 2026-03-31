@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 4 colored blocks (mini puzzle) -->
+  <rect x="12" y="18" width="38" height="38" rx="8" fill="#FF6B9D"/>
+  <text x="31" y="46" text-anchor="middle" font-family="'Fredoka One','Comic Sans MS',sans-serif" font-size="24" font-weight="bold" fill="white">G</text>
+  
+  <rect x="54" y="18" width="38" height="38" rx="8" fill="#4ECDC4"/>
+  <g transform="translate(60,24)">
+    <path d="M13 0 C13 0 13 3 13 3 L9 3 L9 25 L17 25 L17 3 L13 3" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M6 5 L9 5 L9 23 L17 23 L17 5 L20 5 L20 3 L6 3 Z" fill="white" opacity="0.9"/>
+    <polygon points="13,10 14,14 18,14 15,16 16,20 13,18 10,20 11,16 8,14 12,14" fill="#FFD93D"/>
+  </g>
+  
+  <rect x="12" y="60" width="38" height="38" rx="8" fill="#FFD93D"/>
+  <text x="31" y="88" text-anchor="middle" font-family="'Fredoka One','Comic Sans MS',sans-serif" font-size="24" font-weight="bold" fill="#2D2D2D">K</text>
+  
+  <rect x="54" y="60" width="38" height="38" rx="8" fill="#A78BFA"/>
+  <g transform="translate(62,70)">
+    <path d="M4 22 C4 22 2 15 7 8 C11 2 19 2 24 6 C28 10 30 15 32 17 C34 19 32 23 28 23 L4 23 Z" fill="white" opacity="0.9"/>
+    <circle cx="15" cy="12" r="2" fill="#A78BFA"/>
+    <circle cx="21" cy="10" r="2" fill="#A78BFA"/>
+  </g>
+  
+  <!-- "GalaKids" text -->
+  <text x="115" y="62" font-family="'Fredoka One','Comic Sans MS','Arial Rounded MT Bold',sans-serif" 
+        font-size="46" font-weight="bold" letter-spacing="1">
+    <tspan fill="#2D2D2D">Gala</tspan><tspan fill="#FF6B9D">Kids</tspan>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="115" y="82" font-family="'Arial Rounded MT Bold',sans-serif" 
+        font-size="11" fill="#999" letter-spacing="4">
+    CHILDREN'S FASHION
+  </text>
+  
+  <!-- Decorative dots -->
+  <circle cx="345" cy="35" r="4" fill="#FF6B9D" opacity="0.5"/>
+  <circle cx="360" cy="55" r="3" fill="#4ECDC4" opacity="0.5"/>
+  <circle cx="375" cy="40" r="2.5" fill="#FFD93D" opacity="0.6"/>
+  <circle cx="350" cy="70" r="2" fill="#A78BFA" opacity="0.5"/>
+</svg>

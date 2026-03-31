@@ -31,7 +31,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "მთავარი გვერდი | Home Page",
   description:
-    "RussanaForDire - ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. აღმოაჩინეთ მაღალი ხარისხის პროდუქტები და სწრაფი მიწოდება. | RussanaForDire - Online store for clothing, shoes and accessories in Georgia. Discover high-quality products and fast delivery.",
+    "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია საქართველოში. აღმოაჩინეთ მაღალი ხარისხის პროდუქტები და სწრაფი მიწოდება. | GalaKids - Online store for children's clothing in Georgia. Discover high-quality products and fast delivery.",
   keywords: [
     "პიპინიკები",
     "პიპინიკა",
@@ -73,25 +73,25 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "RussanaForDire - ტანსაცმლისა და აქსესუარების ონლაინ მაღაზია | Clothing & Accessories Online Store",
+      "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია | Children's Clothing Online Store",
     description:
-      "აღმოაჩინეთ ექსკლუზიური ტანსაცმელი, ფეხსაცმელი და აქსესუარები RussanaForDire-ში | Discover exclusive clothing, shoes and accessories at RussanaForDire",
-    url: "https://russanafordire.com",
+      "აღმოაჩინეთ ბავშვების ტანსაცმელი GalaKids-ში | Discover children's clothing at GalaKids",
+    url: "https://galakids.ge",
     images: [
       {
-        url: "https://russanafordire.com/logo.png",
+        url: "https://galakids.ge/logo.svg",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire - ონლაინ მაღაზია | Online Store",
+        alt: "GalaKids - ბავშვების ტანსაცმელი | Children's Clothing",
         type: "image/png",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanafordire.com",
+    canonical: "https://galakids.ge",
     languages: {
-      ka: "https://russanafordire.com",
-      en: "https://russanafordire.com/en",
+      ka: "https://galakids.ge",
+      en: "https://galakids.ge/en",
     },
   },
 };

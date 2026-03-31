@@ -2,16 +2,16 @@ export default function StructuredDataOrganization() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "RussanaForDire",
-    url: "https://russanafordire.com",
+    name: "GalaKids",
+    url: "https://galakids.ge",
     logo: {
       "@type": "ImageObject",
-      url: "https://russanafordire.com/logo.png",
+      url: "https://galakids.ge/logo.svg",
       width: 1200,
       height: 630,
-      contentUrl: "https://russanafordire.com/logo.png",
+      contentUrl: "https://galakids.ge/logo.svg",
     },
-    image: "https://russanafordire.com/logo.png",
+    image: "https://galakids.ge/logo.svg",
     description:
       "თანამედროვე პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. Modern online store for pipinika clothing, shoes and accessories in Georgia.",
     address: {
@@ -24,13 +24,13 @@ export default function StructuredDataOrganization() {
       "@type": "ContactPoint",
       contactType: "customer service",
       availableLanguage: ["Georgian", "English"],
-      url: "https://russanafordire.com/contact",
+      url: "https://galakids.ge/contact",
     },
     sameAs: [
       // აქ დაამატეთ ღია სოციალური მედიის ლინკები
     ],
     foundingDate: "2024",
-    slogan: "RussanaForDire - ტანსაცმლისა და აქსესუარების ონლაინ მაღაზია",
+    slogan: "GalaKids - ტანსაცმლისა და აქსესუარების ონლაინ მაღაზია",
   };
 
   return (

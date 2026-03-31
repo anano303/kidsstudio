@@ -1,2 +1,1 @@
-# kidsstudio
-
+# GalaKids

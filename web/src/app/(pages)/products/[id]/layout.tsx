@@ -21,14 +21,14 @@ export async function generateMetadata({
 
     if (!response.ok) {
       return {
-        title: "Product Not Found | RussanaForDire",
+        title: "Product Not Found | GalaKids",
         description: "The requested product could not be found.",
       };
     }
 
     const product = await response.json();
 
-    const title = `${product.name} - ${product.brand} | RussanaForDire`;
+    const title = `${product.name} - ${product.brand} | GalaKids`;
 
     let description =
       product.description?.slice(0, 160) ||
@@ -58,7 +58,7 @@ export async function generateMetadata({
       ...(product.hashtags || []),
       "საზაფხულო",
       "მაისური",
-      "russanaForDire",
+      "galakids",
     ].join(", ");
 
     return {
@@ -81,7 +81,7 @@ export async function generateMetadata({
             : [],
         type: "website",
         locale: "ka_GE",
-        siteName: "RussanaForDire",
+        siteName: "GalaKids",
       },
       twitter: {
         card: "summary_large_image",
@@ -90,14 +90,14 @@ export async function generateMetadata({
         images: product.images?.length > 0 ? [product.images[0]] : [],
       },
       alternates: {
-        canonical: `https://russanaForDire.com/products/${id}`,
+        canonical: `https://galakids.ge/products/${id}`,
       },
     };
   } catch (error) {
     console.error("Error generating metadata:", error);
     return {
-      title: "Product | RussanaForDire",
-      description: "Discover products on RussanaForDire",
+      title: "Product | GalaKids",
+      description: "Discover products on GalaKids",
     };
   }
 }

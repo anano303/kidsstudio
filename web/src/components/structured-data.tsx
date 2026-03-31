@@ -4,9 +4,9 @@ export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "RussanaForDire",
-    url: "https://russanafordire.com",
-    logo: "https://russanafordire.com/logo.png",
+    name: "GalaKids",
+    url: "https://galakids.ge",
+    logo: "https://galakids.ge/logo.svg",
     description:
       "თანამედროვე პიპინიკატანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. Modern online store for clothing, shoes and accessories in Georgia.",
     contactPoint: {
@@ -16,8 +16,8 @@ export default function StructuredData() {
     },
     sameAs: [
       // დაამატეთ სოციალური მედიის ლინკები თუ გაქვთ
-      // "https://www.facebook.com/russanafordire",
-      // "https://www.instagram.com/russanafordire"
+      // "https://www.facebook.com/galakids",
+      // "https://www.instagram.com/galakids"
     ],
     address: {
       "@type": "PostalAddress",

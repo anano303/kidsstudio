@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "კალათა | Cart",
   description:
-    "თქვენი შეკვეთის კალათა RussanaForDire ონლაინ მაღაზიაში. განხილეთ შერჩეული პროდუქტები და განაგრძეთ შეკვეთის პროცესი. | Your shopping cart at RussanaForDire online store. Review selected products and proceed to checkout.",
+    "თქვენი შეკვეთის კალათა GalaKids ონლაინ მაღაზიაში. განხილეთ შერჩეული პროდუქტები და განაგრძეთ შეკვეთის პროცესი. | Your shopping cart at GalaKids online store. Review selected products and proceed to checkout.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
     "online shopping",
   ],
   openGraph: {
-    title: "კალათა - RussanaForDire | Cart - RussanaForDire",
+    title: "კალათა - GalaKids | Cart - GalaKids",
     description:
       "თქვენი შერჩეული პროდუქტები შეკვეთისთვის | Your selected products for checkout",
-    url: "https://russanaForDire.com/cart",
+    url: "https://galakids.ge/cart",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire კალათა | Cart",
+        alt: "GalaKids კალათა | Cart",
       },
     ],
   },

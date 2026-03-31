@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "შესვლა | Login",
   description:
-    "შედით თქვენს RussanaForDire ანგარიშში. მარტივი და უსაფრთხო ავტორიზაცია ონლაინ შოპინგისთვის. | Log in to your RussanaForDire account. Simple and secure authorization for online shopping.",
+    "შედით თქვენს GalaKids ანგარიშში. მარტივი და უსაფრთხო ავტორიზაცია ონლაინ შოპინგისთვის. | Log in to your GalaKids account. Simple and secure authorization for online shopping.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -32,31 +32,31 @@ export const metadata: Metadata = {
     "ავტორიზაცია",
     "ანგარიში",
     "ლოგინი",
-    "RussanaForDire",
+    "GalaKids",
     "login",
     "authorization",
     "account",
     "sign in",
   ],
   openGraph: {
-    title: "შესვლა - RussanaForDire | Login - RussanaForDire",
+    title: "შესვლა - GalaKids | Login - GalaKids",
     description:
       "შედით თქვენს ანგარიშში უსაფრთხოდ | Log in to your account securely",
-    url: "https://russanaForDire.com/login",
+    url: "https://galakids.ge/login",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire შესვლა | Login",
+        alt: "GalaKids შესვლა | Login",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanaForDire.com/login",
+    canonical: "https://galakids.ge/login",
     languages: {
-      ka: "https://russanaForDire.com/login",
-      en: "https://russanaForDire.com/en/login",
+      ka: "https://galakids.ge/login",
+      en: "https://galakids.ge/en/login",
     },
   },
   robots: {

@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   },
   serverExternalPackages: [],
   images: {
-    domains: ["res.cloudinary.com", "russanafordire.s3.eu-north-1.amazonaws.com"],
+    domains: ["res.cloudinary.com", "galakids.s3.eu-north-1.amazonaws.com"],
     remotePatterns: [
       {
         protocol: "https",
@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "russanafordire.s3.eu-north-1.amazonaws.com",
+        hostname: "galakids.s3.eu-north-1.amazonaws.com",
         port: "",
         pathname: "**",
       },

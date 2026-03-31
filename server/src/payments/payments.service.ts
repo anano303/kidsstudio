@@ -87,8 +87,8 @@ export class PaymentsService {
         ttl: 10,
         redirect_urls: {
           success:
-            data.successUrl || 'https://russanafordire/checkout/success',
-          fail: data.failUrl || 'https://russanafordire/checkout/fail',
+            data.successUrl || 'https://galakids/checkout/success',
+          fail: data.failUrl || 'https://galakids/checkout/fail',
         },
       };
 

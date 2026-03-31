@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "პროდუქტები | Products",
   description:
-    "დეტალური ინფორმაცია პროდუქტების შესახებ RussanaForDire ონლაინ მაღაზიაში. მაღალი ხარისხის ტანსაცმელი, ფეხსაცმელი და აქსესუარები. | Detailed information about products at RussanaForDire online store. High-quality clothing, shoes and accessories.",
+    "დეტალური ინფორმაცია პროდუქტების შესახებ GalaKids ონლაინ მაღაზიაში. მაღალი ხარისხის ტანსაცმელი, ფეხსაცმელი და აქსესუარები. | Detailed information about products at GalaKids online store. High-quality clothing, shoes and accessories.",
   keywords: [
        "პიპინიკები",
     "პიპინიკა",
@@ -42,25 +42,25 @@ export const metadata: Metadata = {
     "purchase",
   ],
   openGraph: {
-    title: "პროდუქტები - RussanaForDire | Products - RussanaForDire",
+    title: "პროდუქტები - GalaKids | Products - GalaKids",
     description:
       "იხილეთ პროდუქტების დეტალური ინფორმაცია და შეიძინეთ | View detailed product information and purchase",
     type: "website",
-    url: "https://russanaForDire.com/products",
+    url: "https://galakids.ge/products",
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire პროდუქტები | Products",
+        alt: "GalaKids პროდუქტები | Products",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanaForDire.com/products",
+    canonical: "https://galakids.ge/products",
     languages: {
-      ka: "https://russanaForDire.com/products",
-      en: "https://russanaForDire.com/en/products",
+      ka: "https://galakids.ge/products",
+      en: "https://galakids.ge/en/products",
     },
   },
   robots: {

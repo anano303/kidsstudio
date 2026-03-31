@@ -1,0 +1,334 @@
+.puzzle-logo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.puzzle-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  padding: 10px;
+}
+
+/* --- Puzzle Pieces --- */
+.puzzle-piece {
+  width: 100%;
+  aspect-ratio: 1;
+  opacity: 0;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  will-change: transform, opacity;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.08) rotate(2deg) !important;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+  z-index: 10;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.piece-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Piece 1: flies in from top-left --- */
+.piece-1.animate {
+  animation: flyFromTopLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.1s;
+}
+
+/* --- Piece 2: flies in from top-right --- */
+.piece-2.animate {
+  animation: flyFromTopRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.3s;
+}
+
+/* --- Piece 3: flies in from bottom-left --- */
+.piece-3.animate {
+  animation: flyFromBottomLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.5s;
+}
+
+/* --- Piece 4: flies in from bottom-right --- */
+.piece-4.animate {
+  animation: flyFromBottomRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes flyFromTopLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-90vw, -60vh) rotate(-180deg) scale(0.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(8px, 8px) rotate(10deg) scale(1.05);
+  }
+  80% {
+    transform: translate(-3px, -3px) rotate(-3deg) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes flyFromTopRight {
+  0% {
+    opacity: 0;
+    transform: translate(90vw, -60vh) rotate(180deg) scale(0.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-8px, 8px) rotate(-10deg) scale(1.05);
+  }
+  80% {
+    transform: translate(3px, -3px) rotate(3deg) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes flyFromBottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-90vw, 60vh) rotate(180deg) scale(0.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(8px, -8px) rotate(-10deg) scale(1.05);
+  }
+  80% {
+    transform: translate(-3px, 3px) rotate(3deg) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes flyFromBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(90vw, 60vh) rotate(-180deg) scale(0.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-8px, -8px) rotate(10deg) scale(1.05);
+  }
+  80% {
+    transform: translate(3px, 3px) rotate(-3deg) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+/* --- Center text overlay --- */
+.puzzle-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.puzzle-center-text.show {
+  animation: textPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 2s;
+}
+
+.center-text-svg {
+  width: 260px;
+  height: 80px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes textPop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- Sparkles --- */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 18px;
+  opacity: 0;
+  color: #ffd93d;
+}
+
+.s1 { top: -5%; left: 10%; color: #ff6b9d; font-size: 22px; }
+.s2 { top: 5%; right: 5%; color: #4ecdc4; font-size: 16px; }
+.s3 { bottom: 10%; left: -5%; color: #ffd93d; font-size: 20px; }
+.s4 { bottom: -2%; right: 10%; color: #a78bfa; font-size: 18px; }
+.s5 { top: 50%; left: -8%; color: #ff6b9d; font-size: 14px; }
+.s6 { top: 40%; right: -5%; color: #4ecdc4; font-size: 16px; }
+
+.sparkles.show .s1 {
+  animation: sparkleIn 0.6s ease-out 2.2s forwards, sparkleFloat 3s ease-in-out 2.8s infinite;
+}
+.sparkles.show .s2 {
+  animation: sparkleIn 0.6s ease-out 2.4s forwards, sparkleFloat 3s ease-in-out 3s infinite;
+}
+.sparkles.show .s3 {
+  animation: sparkleIn 0.6s ease-out 2.3s forwards, sparkleFloat 3s ease-in-out 2.9s infinite;
+}
+.sparkles.show .s4 {
+  animation: sparkleIn 0.6s ease-out 2.5s forwards, sparkleFloat 3s ease-in-out 3.1s infinite;
+}
+.sparkles.show .s5 {
+  animation: sparkleIn 0.6s ease-out 2.6s forwards, sparkleFloat 3s ease-in-out 3.2s infinite;
+}
+.sparkles.show .s6 {
+  animation: sparkleIn 0.6s ease-out 2.7s forwards, sparkleFloat 3s ease-in-out 3.3s infinite;
+}
+
+@keyframes sparkleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.4) rotate(200deg);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-8px) scale(1.1) rotate(90deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-4px) scale(0.9) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-10px) scale(1.05) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+/* --- Continuous idle animations after assembly --- */
+.piece-1.idle {
+  animation: piecePop1 4s ease-in-out 0s infinite;
+}
+.piece-2.idle {
+  animation: piecePop2 5s ease-in-out 1.2s infinite;
+}
+.piece-3.idle {
+  animation: piecePop3 4.5s ease-in-out 2.5s infinite;
+}
+.piece-4.idle {
+  animation: piecePop4 5.5s ease-in-out 0.8s infinite;
+}
+
+.piece-1.idle,
+.piece-2.idle,
+.piece-3.idle,
+.piece-4.idle {
+  opacity: 1;
+}
+
+@keyframes piecePop1 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  15% { transform: scale(1.18) rotate(4deg); filter: drop-shadow(0 6px 18px rgba(255, 107, 157, 0.4)); }
+  30% { transform: scale(0.95) rotate(-2deg); }
+  45% { transform: scale(1.05) rotate(1deg); }
+  60% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes piecePop2 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(1.15) rotate(-5deg); filter: drop-shadow(0 6px 18px rgba(78, 205, 196, 0.4)); }
+  40% { transform: scale(0.93) rotate(3deg); }
+  55% { transform: scale(1.06) rotate(-1deg); }
+  70% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes piecePop3 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  10% { transform: scale(1.12) rotate(3deg); filter: drop-shadow(0 6px 18px rgba(255, 217, 61, 0.4)); }
+  25% { transform: scale(0.94) rotate(-4deg); }
+  40% { transform: scale(1.08) rotate(2deg); }
+  55% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes piecePop4 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  18% { transform: scale(1.2) rotate(-3deg); filter: drop-shadow(0 6px 18px rgba(167, 139, 250, 0.4)); }
+  35% { transform: scale(0.92) rotate(5deg); }
+  50% { transform: scale(1.07) rotate(-2deg); }
+  65% { transform: scale(1) rotate(0deg); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .puzzle-logo-container {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .center-text-svg {
+    width: 200px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .puzzle-logo-container {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .center-text-svg {
+    width: 160px;
+    height: 50px;
+  }
+  .sparkle {
+    font-size: 12px;
+  }
+}

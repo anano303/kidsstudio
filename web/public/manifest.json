@@ -1,5 +1,5 @@
 {
-  "name": "App",
+  "name": "GalaKids",
   "icons": [
     {
       "src": "/favicon-96x96.png",
@@ -7,9 +7,9 @@
       "type": "image/png"
     },
     {
-      "src": "/logo.png",
+      "src": "/logo.svg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/svg+xml"
     }
   ]
 }

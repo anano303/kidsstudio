@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 
 async function removeTTLIndexCompletely() {
   const client = new MongoClient(
-    process.env.MONGODB_URL || 'mongodb://localhost:27017/russana',
+    process.env.MONGODB_URL || 'mongodb://localhost:27017/galakids',
   );
 
   try {

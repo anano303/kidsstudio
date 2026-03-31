@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://russanafordire.com";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://galakids.ge";
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -78,8 +78,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let productPages: MetadataRoute.Sitemap = [];
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL?.includes("localhost")
-      ? "https://russana.onrender.com/v1"
-      : process.env.NEXT_PUBLIC_API_URL || "https://russana.onrender.com/v1";
+      ? "https://galakids.onrender.com/v1"
+      : process.env.NEXT_PUBLIC_API_URL || "https://galakids.onrender.com/v1";
     const response = await fetch(`${apiUrl}/products?limit=1000`);
 
     if (response.ok) {
@@ -103,8 +103,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let categoryPages: MetadataRoute.Sitemap = [];
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL?.includes("localhost")
-      ? "https://russana.onrender.com/v1"
-      : process.env.NEXT_PUBLIC_API_URL || "https://russana.onrender.com/v1";
+      ? "https://galakids.onrender.com/v1"
+      : process.env.NEXT_PUBLIC_API_URL || "https://galakids.onrender.com/v1";
     const response = await fetch(`${apiUrl}/categories`);
 
     if (response.ok) {

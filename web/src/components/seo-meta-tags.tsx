@@ -4,16 +4,16 @@ export default function SEOMetaTags() {
   return (
     <Head>
       {/* Google Business Logo */}
-      <meta property="og:logo" content="https://russanafordire.com/logo.png" />
-      <meta name="logo" content="https://russanafordire.com/logo.png" />
+      <meta property="og:logo" content="https://galakids.ge/logo.svg" />
+      <meta name="logo" content="https://galakids.ge/logo.svg" />
 
       {/* Rich Snippets for Google */}
-      <meta itemProp="name" content="RussanaForDire" />
+      <meta itemProp="name" content="GalaKids" />
       <meta
         itemProp="description"
         content=" პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში"
       />
-      <meta itemProp="image" content="https://russanafordire.com/logo.png" />
+      <meta itemProp="image" content="https://galakids.ge/logo.svg" />
 
       {/* Additional Open Graph tags */}
       <meta property="og:image:width" content="1200" />
@@ -21,7 +21,7 @@ export default function SEOMetaTags() {
       <meta property="og:image:type" content="image/png" />
       <meta
         property="og:image:secure_url"
-        content="https://russanafordire.com/logo.png"
+        content="https://galakids.ge/logo.svg"
       />
 
       {/* Business Information */}
@@ -29,7 +29,7 @@ export default function SEOMetaTags() {
       <meta name="business:contact_data:locality" content="Tbilisi" />
       <meta
         name="business:contact_data:website"
-        content="https://russanafordire.com"
+        content="https://galakids.ge"
       />
 
       {/* Theme Color */}

@@ -16,15 +16,15 @@ import StructuredDataOrganization from "@/components/structured-data-organizatio
 // ⚠️ ყურადღება: აქ აღარ გვაქვს Header/Footer რადგან ისინი გადადის EntryGate-ში
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_CLIENT_URL || "https://russanafordire.com"
+    process.env.NEXT_PUBLIC_CLIENT_URL || "https://galakids.ge",
   ),
   title: {
     default:
-      "RussanaForDire - პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია | Clothing, Shoes & Accessories Online Store",
-    template: "%s | RussanaForDire",
+      "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია | Children's Clothing Online Store",
+    template: "%s | GalaKids",
   },
   description:
-    "RussanaForDire - თანამედროვე პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში. მაღალი ხარისხის პროდუქტები და სწრაფი მიწოდება მთელ ქვეყანაში. | Modern online store for clothing, shoes and accessories in Georgia. High-quality products and fast delivery nationwide.",
+    "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია საქართველოში. მაღალი ხარისხის ბავშვის ტანსაცმელი და სწრაფი მიწოდება მთელ ქვეყანაში. | Children's clothing online store in Georgia. High-quality kids' clothing and fast delivery nationwide.",
   keywords: [
     "პიპინიკები",
     "პიპინიკა",
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
     "style",
     "quality",
   ],
-  authors: [{ name: "RussanaForDire Team" }],
-  creator: "RussanaForDire",
-  publisher: "RussanaForDire",
+  authors: [{ name: "GalaKids Team" }],
+  creator: "GalaKids",
+  publisher: "GalaKids",
   formatDetection: {
     email: false,
     address: false,
@@ -92,18 +92,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ka_GE",
-    url: "https://russanafordire.com/",
-    siteName: "RussanaForDire",
+    url: "https://galakids.ge/",
+    siteName: "GalaKids",
     title:
-      "RussanaForDire - პიპინიკაა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია | Clothing, Shoes & Accessories Online Store",
+      "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია | Children's Clothing Online Store",
     description:
-      "შეიძინეთ მაღალი ხარისხის პიპინიკა ტანსაცმელი, ფეხსაცმელი და აქსესუარები RussanaForDire-დან. სწრაფი მიწოდება მთელ საქართველოში. | Purchase high-quality clothing, shoes and accessories from RussanaForDire. Fast delivery throughout Georgia.",
+      "შეიძინეთ მაღალი ხარისხის ბავშვის ტანსაცმელი GalaKids-დან. სწრაფი მიწოდება მთელ საქართველოში. | Purchase high-quality children's clothing from GalaKids. Fast delivery throughout Georgia.",
     images: [
       {
-        url: "https://russanafordire.com/logo.png",
+        url: "https://galakids.ge/logo.svg",
         width: 1200,
         height: 630,
-        alt: "RussanaForDire - ონლაინ მაღაზია | Online Store",
+        alt: "GalaKids - ბავშვების ტანსაცმელი | Children's Clothing",
         type: "image/png",
       },
     ],
@@ -125,23 +125,23 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   twitter: {
     card: "summary_large_image",
-    site: "@RussanaForDire",
+    site: "@GalaKids",
     title:
-      "RussanaForDire - პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია | Pipinika Clothing, Shoes & Accessories Online Store",
+      "GalaKids - ბავშვების ტანსაცმლის ონლაინ მაღაზია | Children's Clothing Online Store",
     description:
-      "შეიძინეთ მაღალი ხარისხის პიპინიკა ტანსაცმელი, ფეხსაცმელი და აქსესუარები RussanaForDire-დან. | Purchase high-quality pipinika clothing, shoes and accessories from RussanaForDire.",
+      "შეიძინეთ მაღალი ხარისხის ბავშვის ტანსაცმელი GalaKids-დან. | Purchase high-quality children's clothing from GalaKids.",
     images: [
       {
-        url: "https://russanafordire.com/logo.png",
-        alt: "RussanaForDire Logo",
+        url: "https://galakids.ge/logo.svg",
+        alt: "GalaKids Logo",
       },
     ],
   },
   alternates: {
-    canonical: "https://russanafordire.com",
+    canonical: "https://galakids.ge",
     languages: {
-      ka: "https://russanafordire.com",
-      en: "https://russanafordire.com/en",
+      ka: "https://galakids.ge",
+      en: "https://galakids.ge/en",
     },
   },
 };
@@ -154,9 +154,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "RussanaForDire",
-    url: "https://russanafordire.com",
-    logo: "https://russanafordire.com/logo.png",
+    name: "GalaKids",
+    url: "https://galakids.ge",
+    logo: "https://galakids.ge/logo.svg",
     description:
       "პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში",
     address: {
@@ -167,11 +167,11 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      email: "info@russanaForDire.com",
+      email: "info@galakids.ge",
     },
     sameAs: [
-      "https://www.facebook.com/russanaForDire",
-      "https://www.instagram.com/russanaForDire",
+      "https://www.facebook.com/GalaKids",
+      "https://www.instagram.com/GalaKids",
     ],
   };
 
@@ -179,17 +179,17 @@ export default function RootLayout({
     <html lang="ka">
       <head>
         {/* Additional meta tags for better Google recognition */}
-        <meta name="application-name" content="RussanaForDire" />
+        <meta name="application-name" content="GalaKids" />
         <meta name="msapplication-TileColor" content="#F9F9F9" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#F9F9F9" />
 
         {/* Business Schema */}
         <meta itemScope itemType="https://schema.org/Organization" />
-        <meta itemProp="name" content="RussanaForDire" />
-        <meta itemProp="url" content="https://russanafordire.com" />
-        <meta itemProp="logo" content="https://russanafordire.com/logo.png" />
-        <meta itemProp="image" content="https://russanafordire.com/logo.png" />
+        <meta itemProp="name" content="GalaKids" />
+        <meta itemProp="url" content="https://galakids.ge" />
+        <meta itemProp="logo" content="https://galakids.ge/logo.svg" />
+        <meta itemProp="image" content="https://galakids.ge/logo.svg" />
         <meta
           itemProp="description"
           content="პიპინიკა ტანსაცმლის, ფეხსაცმლისა და აქსესუარების ონლაინ მაღაზია საქართველოში"
@@ -218,10 +218,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Open Graph specific logo */}
-        <meta
-          property="og:logo"
-          content="https://russanafordire.com/logo.png"
-        />
+        <meta property="og:logo" content="https://galakids.ge/logo.svg" />
         <meta property="business:contact_data:country_name" content="Georgia" />
         <meta property="business:contact_data:locality" content="Tbilisi" />
 

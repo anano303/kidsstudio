@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="300" height="280">
+  <defs>
+    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4D6D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C9184A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="ds" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Heart shape -->
+  <path d="M150 250 
+           C150 250 20 170 20 95 
+           C20 45 55 15 95 15 
+           C120 15 138 30 150 60 
+           C162 30 180 15 205 15 
+           C245 15 280 45 280 95 
+           C280 170 150 250 150 250Z" 
+        fill="url(#hg)" filter="url(#ds)"/>
+
+  <!-- White banner across heart -->
+  <rect x="40" y="105" width="220" height="38" rx="4" fill="white" opacity="0.92" transform="rotate(-4, 150, 124)"/>
+
+  <!-- "GALAKIDS" text -->
+  <text x="150" y="134" font-family="'Georgia', 'Times New Roman', serif" 
+        font-size="32" font-weight="bold" fill="#2D2D2D" text-anchor="middle" 
+        letter-spacing="4" transform="rotate(-4, 150, 134)">
+    GALAKIDS
+  </text>
+
+  <!-- Star decorations -->
+  <polygon points="100,170 103,178 111,178 105,183 107,191 100,186 93,191 95,183 89,178 97,178" 
+           fill="#FFD93D" />
+  <polygon points="200,166 203,174 211,174 205,179 207,187 200,182 193,187 195,179 189,174 197,174" 
+           fill="#FFD93D" />
+
+  <!-- Small T-shirt icon on heart -->
+  <g transform="translate(134, 55) scale(0.35)">
+    <path d="M15 0 L0 15 L8 18 L8 48 L48 48 L48 18 L56 15 L41 0 L35 7 C32 11 24 11 21 7 Z" 
+          fill="white" opacity="0.85" stroke="none"/>
+    <polygon points="28,17 30,24 37,24 32,28 34,35 28,31 22,35 24,28 19,24 26,24" 
+             fill="#FFD93D" />
+  </g>
+
+  <!-- Subtitle -->
+  <text x="150" y="210" font-family="'Georgia', 'Times New Roman', serif" 
+        font-size="13" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.9">
+    CHILDREN'S FASHION
+  </text>
+</svg>
