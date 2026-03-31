@@ -16,7 +16,13 @@ import { useRouter } from "next/navigation";
 interface CartContextType {
   items: CartItem[];
   loading: boolean;
-  addItem: (productId: string, qty: number) => Promise<void>;
+  addItem: (
+    productId: string,
+    qty: number,
+    size?: string,
+    color?: string,
+    ageGroup?: string
+  ) => Promise<void>;
   removeItem: (
     productId: string,
     size?: string,
@@ -55,13 +61,22 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const totalItems = items.reduce((total, item) => total + item.qty, 0);
 
   const addItem = useCallback(
-    async (productId: string, qty: number) => {
+    async (
+      productId: string,
+      qty: number,
+      size?: string,
+      color?: string,
+      ageGroup?: string
+    ) => {
       setLoading(true);
       try {
         if (user) {
           const { data } = await apiClient.post("/cart/items", {
             productId,
             qty,
+            size,
+            color,
+            ageGroup,
           });
           setItems(data.items);
           toast({
@@ -293,19 +308,31 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const mergeCarts = useCallback(
     async (localItems: CartItem[], serverItems: CartItem[]) => {
+      const makeKey = (item: CartItem) =>
+        `${item.productId}-${item.size ?? ""}-${item.color ?? ""}-${item.ageGroup ?? ""}`;
+
       const serverItemsMap = new Map(
-        serverItems.map((item) => [item.productId, item])
+        serverItems.map((item) => [makeKey(item), item])
       );
 
       for (const localItem of localItems) {
-        const serverItem = serverItemsMap.get(localItem.productId);
+        const serverItem = serverItemsMap.get(makeKey(localItem));
         if (serverItem) {
           await updateQuantity(
             localItem.productId,
-            Math.max(localItem.qty, serverItem.qty)
+            Math.max(localItem.qty, serverItem.qty),
+            localItem.size,
+            localItem.color,
+            localItem.ageGroup
           );
         } else {
-          await addItem(localItem.productId, localItem.qty);
+          await addItem(
+            localItem.productId,
+            localItem.qty,
+            localItem.size,
+            localItem.color,
+            localItem.ageGroup
+          );
         }
       }
     },

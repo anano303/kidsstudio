@@ -12,8 +12,13 @@ export default function ChatButton() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/settings`)
       .then((res) => res.json())
       .then((data) => {
-        if (data?.messengerLink) {
-          setMessengerLink(data.messengerLink);
+        if (data?.messengerLink && data.messengerLink.trim() !== "") {
+          let link = data.messengerLink.trim();
+          // Ensure the link has a protocol
+          if (!link.startsWith("http://") && !link.startsWith("https://")) {
+            link = "https://" + link;
+          }
+          setMessengerLink(link);
         }
       })
       .catch(() => {});
