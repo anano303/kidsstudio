@@ -12,6 +12,7 @@ import { AppController } from './controllers/app.controller';
 import { CloudinaryModule } from '../cloudinary/cloudinary.module';
 import { AppService } from './services/app.service';
 import { BannerModule } from '../banners/banner.module';
+import { SettingsModule } from '../settings/settings.module';
 import { SharedServicesModule } from './shared-services.module';
 
 import { GoogleStrategy } from '@/strategies/google.strategy';
@@ -46,6 +47,7 @@ import { CategoriesModule } from '@/categories/categories.module';
     PaymentsModule,
     SharedServicesModule,
     BannerModule,
+    SettingsModule,
 
     // SeedsModule,
   ],

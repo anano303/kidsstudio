@@ -27,10 +27,12 @@ export const TRANSLATIONS: Translations = {
       adminPanel: "ადმინ პანელი",
       products: "პროდუქტები",
       users: "მომხმარებლები",
+      banners: "ბანერები",
       logout: "გასვლა",
     }, // Shop
     shop: {
       resetFilters: "ფილტრების გასუფთავება",
+      searchPlaceholder: "მოიძიე პროდუქტები...",
       products: "პროდუქტები",
       searchResults: "ძებნის შედეგები",
       backToHome: "მთავარ გვერდზე დაბრუნება",
@@ -174,6 +176,41 @@ export const TRANSLATIONS: Translations = {
       age: "ასაკი",
       order: "შეკვეთა",
       goToCart: "გადადი კალათში",
+    },
+
+    // Checkout
+    checkout: {
+      deliveryAddress: "მიწოდების მისამართი",
+      address: "მისამართი",
+      addressPlaceholder: "მაგ: რუსთაველის გამზ. 12",
+      city: "ქალაქი",
+      cityPlaceholder: "მაგ: თბილისი",
+      postalCode: "საფოსტო კოდი",
+      postalCodePlaceholder: "მაგ: 0100",
+      mobile: "მობილურის ნომერი",
+      country: "ქვეყანა",
+      orderProducts: "შეკვეთის პროდუქტები",
+      orderSummary: "შეკვეთის ჯამი",
+      products: "პროდუქტები",
+      cartEmpty: "კალათა ცარიელია",
+      paymentSuccess: "გადახდა წარმატებით დასრულდა!",
+      paymentSuccessMessage: "თქვენი შეკვეთა მიღებულია. მადლობა!",
+      paymentFailed: "გადახდა ვერ შესრულდა",
+      paymentFailedMessage: "სცადეთ თავიდან",
+      backToHome: "მთავარ გვერდზე",
+      tryAgain: "სცადეთ თავიდან",
+      addressRequired: "მისამართი სავალდებულოა",
+      cityRequired: "ქალაქი სავალდებულოა",
+      postalCodeRequired: "საფოსტო კოდი სავალდებულოა",
+      mobileRequired: "მობილურის ნომერი სავალდებულოა",
+      countryRequired: "ქვეყანა სავალდებულოა",
+      selectCountry: "აირჩიეთ ქვეყანა",
+      viewProducts: "პროდუქტების ნახვა",
+      cardPayment: "ნებისმიერი ბარათით გადახდა",
+      placeOrder: "შეკვეთის გაფორმება",
+      processing: "მუშავდება...",
+      error: "შეცდომა",
+      errorMessage: "გთხოვთ სცადოთ თავიდან.",
     },
 
     // About page
@@ -363,6 +400,10 @@ export const TRANSLATIONS: Translations = {
       privacyPolicy: "კონფიდენციალურობის პოლიტიკას",
       privacyPolicyRequired:
         "კონფიდენციალურობის პოლიტიკაზე თანხმობა აუცილებელია",
+      agreeToTerms: "ვეთანხმები ",
+      termsConditions: "წესებსა და პირობებს",
+      termsConditionsRequired:
+        "წესებსა და პირობებზე თანხმობა აუცილებელია",
     },
 
     // Contact form
@@ -691,10 +732,12 @@ export const TRANSLATIONS: Translations = {
       adminPanel: "Admin Panel",
       products: "Products",
       users: "Users",
+      banners: "Banners",
       logout: "Logout",
     }, // Shop
     shop: {
       resetFilters: "Reset Filters",
+      searchPlaceholder: "Search products...",
       products: "Products",
       searchResults: "Search Results",
       backToHome: "Back to Home",
@@ -835,6 +878,41 @@ export const TRANSLATIONS: Translations = {
       color: "Color",
       age: "Age",
       order: " Order",
+    },
+
+    // Checkout
+    checkout: {
+      deliveryAddress: "Delivery Address",
+      address: "Address",
+      addressPlaceholder: "e.g. Rustaveli Ave. 12",
+      city: "City",
+      cityPlaceholder: "e.g. Tbilisi",
+      postalCode: "Postal Code",
+      postalCodePlaceholder: "e.g. 0100",
+      mobile: "Mobile Number",
+      country: "Country",
+      orderProducts: "Order Products",
+      orderSummary: "Order Summary",
+      products: "Products",
+      cartEmpty: "Cart is empty",
+      paymentSuccess: "Payment Completed Successfully!",
+      paymentSuccessMessage: "Your order has been received. Thank you!",
+      paymentFailed: "Payment Failed",
+      paymentFailedMessage: "Please try again",
+      backToHome: "Back to Home",
+      tryAgain: "Try Again",
+      addressRequired: "Address is required",
+      cityRequired: "City is required",
+      postalCodeRequired: "Postal code is required",
+      mobileRequired: "Mobile number is required",
+      countryRequired: "Country is required",
+      selectCountry: "Select a country",
+      viewProducts: "View Products",
+      cardPayment: "Pay with any card",
+      placeOrder: "Place Order",
+      processing: "Processing...",
+      error: "Error",
+      errorMessage: "Please try again.",
     },
 
     // About page
@@ -988,6 +1066,10 @@ export const TRANSLATIONS: Translations = {
       agreeToPrivacyPolicy: "I agree to the ",
       privacyPolicy: "Privacy Policy",
       privacyPolicyRequired: "You must accept the privacy policy to register",
+      agreeToTerms: "I agree to the ",
+      termsConditions: "Terms & Conditions",
+      termsConditionsRequired:
+        "You must accept the terms and conditions to register",
     },
 
     // Contact form

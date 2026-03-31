@@ -4,11 +4,13 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/hooks/LanguageContext";
 import "./page.css";
 
 function CheckoutSuccessContent() {
   const searchParams = useSearchParams();
   const [orderId, setOrderId] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const orderIdParam = searchParams.get("orderId");
@@ -21,7 +23,7 @@ function CheckoutSuccessContent() {
         <div className="success-card">
           {/* <Image src="/heartLast.png" alt="heartLogo" className="heartLast" width={500} height={700}/> */}
 
-          <h1 className="success-title">გადახდა წარმატებით დასრულდა!</h1>
+          <h1 className="success-title">{t("checkout.paymentSuccess")}</h1>
           <div className="success-icon-container">
             <Image
               src="/ok.png"

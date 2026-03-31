@@ -2,14 +2,15 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-// import Image from "next/image";
 import "./SearchBox.css";
 import Image from "next/image";
+import { useLanguage } from "@/hooks/LanguageContext";
 // import searchIcon from "../../assets/icons/search.png";
 
 export default function SearchBox() {
   const router = useRouter();
   const [keyword, setKeyword] = useState("");
+  const { t } = useLanguage();
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ export default function SearchBox() {
       {/* <Image src={searchIcon} alt="search icon" className="searchIcon" /> */}
       <input
         type="text"
-        placeholder="მოიძიე პიპინიკები..."
+        placeholder={t("shop.searchPlaceholder")}
         value={keyword}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setKeyword(e.target.value)

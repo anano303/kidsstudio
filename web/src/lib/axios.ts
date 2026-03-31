@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getAccessToken } from "./auth";
 
 export const axiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/v1",
@@ -28,7 +29,7 @@ const publicRoutes = [
 // მარტივი რექვესთ ინტერცეპტორი
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("accessToken");
+    const token = getAccessToken();
     if (token && config.headers) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -36,7 +37,7 @@ axiosInstance.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 // მარტივი რესპონს ინტერცეპტორი
@@ -48,7 +49,7 @@ axiosInstance.interceptors.response.use(
       const currentPath = window.location.pathname;
       const isPublicRoute = publicRoutes.some(
         (route) =>
-          currentPath.includes(route) || error.config.url?.includes(route)
+          currentPath.includes(route) || error.config.url?.includes(route),
       );
 
       if (!isPublicRoute) {
@@ -58,7 +59,7 @@ axiosInstance.interceptors.response.use(
       }
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export { axiosInstance as axios };

@@ -1,0 +1,140 @@
+.settings-container {
+  padding: 30px 0;
+}
+
+.settings-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+}
+
+.settings-form {
+  max-width: 600px;
+}
+
+.settings-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.settings-field {
+  margin-bottom: 20px;
+}
+
+.settings-field:last-child {
+  margin-bottom: 0;
+}
+
+.settings-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.settings-field input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.settings-field input:focus {
+  outline: none;
+  border-color: #ff6b9d;
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.settings-field input::placeholder {
+  color: #bbb;
+}
+
+.field-hint {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.settings-save-btn {
+  padding: 12px 32px;
+  background: #ff6b9d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.settings-save-btn:hover {
+  background: #e55a8a;
+}
+
+.settings-save-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.settings-saved-msg {
+  color: #22c55e;
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.settings-error-msg {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.settings-error {
+  color: #ef4444;
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .settings-section {
+    padding: 16px;
+  }
+  .settings-save-btn {
+    width: 100%;
+  }
+  .settings-actions {
+    flex-direction: column;
+  }
+}

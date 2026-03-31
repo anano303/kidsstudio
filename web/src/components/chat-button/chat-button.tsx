@@ -1,11 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./chat-button.css";
 
+const FALLBACK_MESSENGER = "https://m.me/61574139157964";
+
 export default function ChatButton() {
+  const [messengerLink, setMessengerLink] = useState(FALLBACK_MESSENGER);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/settings`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.messengerLink) {
+          setMessengerLink(data.messengerLink);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   const handleChatClick = () => {
-    window.open("https://m.me/61574139157964", "_blank");
+    window.open(messengerLink, "_blank", "noopener,noreferrer");
   };
 
   return (

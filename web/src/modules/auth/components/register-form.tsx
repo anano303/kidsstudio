@@ -17,7 +17,7 @@ import { registerSchema, type RegisterSchema } from "../validation";
 export function RegisterForm() {
   const { t } = useLanguage();
   const [registrationError, setRegistrationError] = useState<string | null>(
-    null
+    null,
   );
 
   const [isSuccess, setIsSuccess] = useState(false);
@@ -188,6 +188,27 @@ export function RegisterForm() {
           </label>
           {errors.acceptPrivacyPolicy && (
             <p className="error-text">{errors.acceptPrivacyPolicy.message}</p>
+          )}
+
+          <label className="privacy-checkbox-label">
+            <input
+              type="checkbox"
+              {...register("acceptTermsConditions")}
+              className="privacy-checkbox"
+            />
+            <span className="privacy-text">
+              {t("auth.agreeToTerms")}
+              <Link
+                href="/terms-conditions"
+                target="_blank"
+                className="privacy-link"
+              >
+                {t("auth.termsConditions")}
+              </Link>
+            </span>
+          </label>
+          {errors.acceptTermsConditions && (
+            <p className="error-text">{errors.acceptTermsConditions.message}</p>
           )}
         </div>
 

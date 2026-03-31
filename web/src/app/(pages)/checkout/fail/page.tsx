@@ -3,12 +3,14 @@
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { useLanguage } from "@/hooks/LanguageContext";
 import "./page.css";
 
 function CheckoutFailContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [orderId, setOrderId] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const orderIdParam = searchParams.get("orderId");
@@ -42,12 +44,9 @@ function CheckoutFailContent() {
           </svg>
         </div>
 
-        <h1 className="fail-title">გადახდა ვერ შესრულდა</h1>
+        <h1 className="fail-title">{t("checkout.paymentFailed")}</h1>
 
-        <p className="fail-description">
-          გადახდის პროცესში რაღაც ხარვეზი მოხდა. გთხოვთ სცადოთ ხელახლა ან
-          დაგვიკავშირდით მხარდაჭერის სამსახურთან.
-        </p>
+        <p className="fail-description">{t("checkout.paymentFailedMessage")}</p>
 
         {orderId && (
           <div className="order-info">
@@ -60,7 +59,7 @@ function CheckoutFailContent() {
 
         <div className="buttons-container">
           <button onClick={handleRetryPayment} className="btn-primary">
-            ხელახლა ცდა
+            {t("checkout.tryAgain")}
           </button>
 
           <Link href="/cart" className="btn-secondary">

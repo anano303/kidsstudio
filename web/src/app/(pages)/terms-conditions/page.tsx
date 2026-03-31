@@ -8,9 +8,9 @@ import { apiClient } from "@/lib/api-client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Pencil, Check, X, Plus, Trash2 } from "lucide-react";
 import Link from "next/link";
-import "./privacy-policy.css";
+import "../privacy-policy/privacy-policy.css";
 
-interface PrivacySection {
+interface TermsSection {
   title: string;
   titleEn: string;
   content: string;
@@ -18,8 +18,8 @@ interface PrivacySection {
   type: "paragraph" | "list";
 }
 
-interface PrivacyPolicyData {
-  sections: PrivacySection[];
+interface TermsConditionsData {
+  sections: TermsSection[];
   effectiveDate: string;
   effectiveDateEn: string;
 }
@@ -120,7 +120,7 @@ function EditableText({
   );
 }
 
-export default function PrivacyPolicy() {
+export default function TermsConditions() {
   const { language } = useLanguage();
   const { user } = useAuth();
   const queryClient = useQueryClient();
@@ -132,40 +132,40 @@ export default function PrivacyPolicy() {
 
   const isAdmin = mounted && user?.role === Role.Admin;
 
-  const { data: policy } = useQuery<PrivacyPolicyData>({
-    queryKey: ["privacy-policy"],
+  const { data: terms } = useQuery<TermsConditionsData>({
+    queryKey: ["terms-conditions"],
     queryFn: async () => {
-      const res = await apiClient.get("/settings/privacy-policy");
+      const res = await apiClient.get("/settings/terms-conditions");
       return res.data;
     },
     staleTime: 10 * 60 * 1000,
   });
 
   const updateMutation = useMutation({
-    mutationFn: async (data: Partial<PrivacyPolicyData>) => {
-      const res = await apiClient.put("/settings/privacy-policy", data);
+    mutationFn: async (data: Partial<TermsConditionsData>) => {
+      const res = await apiClient.put("/settings/terms-conditions", data);
       return res.data;
     },
     onSuccess: (data) => {
-      queryClient.setQueryData(["privacy-policy"], data);
+      queryClient.setQueryData(["terms-conditions"], data);
     },
   });
 
   const handleSectionUpdate = (
     index: number,
-    field: keyof PrivacySection,
+    field: keyof TermsSection,
     value: string,
   ) => {
-    if (!policy) return;
-    const updated = [...policy.sections];
+    if (!terms) return;
+    const updated = [...terms.sections];
     updated[index] = { ...updated[index], [field]: value };
     updateMutation.mutate({ sections: updated });
   };
 
   const handleAddSection = () => {
-    if (!policy) return;
+    if (!terms) return;
     const updated = [
-      ...policy.sections,
+      ...terms.sections,
       {
         title: "ახალი სექცია",
         titleEn: "New Section",
@@ -178,14 +178,14 @@ export default function PrivacyPolicy() {
   };
 
   const handleDeleteSection = (index: number) => {
-    if (!policy) return;
-    const updated = policy.sections.filter((_, i) => i !== index);
+    if (!terms) return;
+    const updated = terms.sections.filter((_, i) => i !== index);
     updateMutation.mutate({ sections: updated });
   };
 
   const handleToggleType = (index: number) => {
-    if (!policy) return;
-    const updated = [...policy.sections];
+    if (!terms) return;
+    const updated = [...terms.sections];
     updated[index] = {
       ...updated[index],
       type: updated[index].type === "list" ? "paragraph" : "list",
@@ -193,15 +193,15 @@ export default function PrivacyPolicy() {
     updateMutation.mutate({ sections: updated });
   };
 
-  const sections = policy?.sections || [];
-  const effectiveDate = policy?.effectiveDate || "1 ივნისი, 2025";
-  const effectiveDateEn = policy?.effectiveDateEn || "January 1, 2025";
+  const sections = terms?.sections || [];
+  const effectiveDate = terms?.effectiveDate || "1 ივნისი, 2025";
+  const effectiveDateEn = terms?.effectiveDateEn || "January 1, 2025";
 
   return (
     <div className="privacy-policy-container">
       <div className="privacy-policy-content">
         <h1 className="privacy-policy-title">
-          {language === "en" ? "Privacy Policy" : "კონფიდენციალურობის პოლიტიკა"}
+          {language === "en" ? "Terms & Conditions" : "წესები და პირობები"}
         </h1>
 
         {sections.map((section, idx) => {
@@ -285,10 +285,10 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="pp-terms-link">
-          <Link href="/terms-conditions">
+          <Link href="/privacy-policy">
             {language === "en"
-              ? "View Terms & Conditions"
-              : "იხილეთ წესები და პირობები"}
+              ? "View Privacy Policy"
+              : "იხილეთ კონფიდენციალურობის პოლიტიკა"}
           </Link>
         </div>
 

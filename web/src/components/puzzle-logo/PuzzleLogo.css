@@ -308,6 +308,17 @@
 }
 
 /* --- Responsive --- */
+@media (max-width: 1000px) {
+  .puzzle-logo-container {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .center-text-svg {
+    width: 230px;
+    height: 70px;
+  }
+}
+
 @media (max-width: 768px) {
   .puzzle-logo-container {
     width: 250px !important;

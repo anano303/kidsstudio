@@ -296,9 +296,42 @@
   margin-top: 2rem;
 }
 .creators img {
-  width: 40%;
+  width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.creator-image-wrap {
+  position: relative;
+  width: 40%;
+}
+
+.creator-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.creator-upload-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(207, 10, 10, 0.85);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.creator-image-wrap:hover .creator-upload-btn {
+  opacity: 1;
 }
 
 @keyframes glow {
@@ -381,4 +414,145 @@
   .brand-intro h2 {
     font-size: 1.5rem;
   }
+}
+
+/* Admin editing styles */
+.about-pencil-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cf0a0a;
+  padding: 2px 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+  margin-left: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about-title:hover .about-pencil-btn,
+.brand-intro:hover .about-pencil-btn,
+.about-section:hover .about-pencil-btn,
+.call-to-action:hover .about-pencil-btn,
+.cta-highlight:hover .about-pencil-btn {
+  opacity: 1;
+}
+
+.about-section-admin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.about-section:hover .about-section-admin {
+  opacity: 1;
+}
+
+.about-edit-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.about-edit-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #cf0a0a;
+  border-radius: 6px;
+  font-family: "ALK Life", serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.about-edit-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cf0a0a;
+  border-radius: 6px;
+  font-family: "ALK Life", serif;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+}
+
+.about-edit-actions {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.about-edit-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about-save {
+  background: #cf0a0a;
+  color: #fff;
+}
+
+.about-cancel {
+  background: #eee;
+  color: #333;
+}
+
+.about-type-toggle {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: "ALK Life", serif;
+  color: #666;
+  white-space: nowrap;
+}
+
+.about-type-toggle:hover {
+  background: #e0e0e0;
+}
+
+.about-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cf0a0a;
+  padding: 2px;
+  opacity: 0.6;
+}
+
+.about-delete-btn:hover {
+  opacity: 1;
+}
+
+.about-add-section-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 1.5rem auto;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #cf0a0a, #e50000);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "ALK Life", serif;
+  font-size: 0.95rem;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+.about-add-section-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
 }

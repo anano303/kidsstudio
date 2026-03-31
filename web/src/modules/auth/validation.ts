@@ -7,6 +7,9 @@ export const registerSchema = z.object({
   acceptPrivacyPolicy: z.boolean().refine((val) => val === true, {
     message: "კონფიდენციალურობის პოლიტიკაზე თანხმობა აუცილებელია",
   }),
+  acceptTermsConditions: z.boolean().refine((val) => val === true, {
+    message: "წესებსა და პირობებზე თანხმობა აუცილებელია",
+  }),
 });
 
 export type RegisterSchema = z.infer<typeof registerSchema>;

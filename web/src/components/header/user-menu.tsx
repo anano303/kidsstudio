@@ -16,11 +16,16 @@ interface UserMenuProps {
 export default function UserMenu({ onMenuAction }: UserMenuProps) {
   const { user, isLoading, logout } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
   // Add state to store profile image URL
   const [profileImage, setProfileImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Update profile image when user changes
   useEffect(() => {
@@ -44,7 +49,7 @@ export default function UserMenu({ onMenuAction }: UserMenuProps) {
     };
   }, []);
 
-  if (isLoading) {
+  if (!mounted || isLoading) {
     return <div className="loader"></div>;
   }
 
@@ -144,7 +149,7 @@ export default function UserMenu({ onMenuAction }: UserMenuProps) {
                   onMenuAction?.();
                 }}
               >
-                ბანერები
+                {t("navigation.banners")}
               </Link>
               <Link
                 href="/admin/users"
@@ -165,6 +170,16 @@ export default function UserMenu({ onMenuAction }: UserMenuProps) {
                 }}
               >
                 {t("navigation.orders")}
+              </Link>
+              <Link
+                href="/admin/settings"
+                className="dropdown-item"
+                onClick={() => {
+                  setIsOpen(false);
+                  onMenuAction?.();
+                }}
+              >
+                პარამეტრები
               </Link>
             </>
           )}

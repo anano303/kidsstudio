@@ -347,3 +347,96 @@
     font-size: 20px;
   }
 }
+
+/* ===== Admin Editable Field Styles ===== */
+.editable-field-pencil {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #cf0a0a;
+  opacity: 0;
+  padding: 2px 4px;
+  margin-left: 4px;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: -1px;
+}
+
+p:hover > .editable-field-pencil,
+span:hover > .editable-field-pencil,
+.social-icon-wrapper:hover + .editable-field-pencil,
+.editable-field-pencil:hover {
+  opacity: 0.7;
+}
+
+.editable-field-pencil:hover {
+  opacity: 1;
+}
+
+.editable-field-editing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.editable-field-input {
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #cf0a0a;
+  border-radius: 4px;
+  padding: 2px 8px;
+  background: #fff;
+  min-width: 120px;
+  max-width: 320px;
+  outline: none;
+}
+
+.editable-field-input:focus {
+  box-shadow: 0 0 0 2px rgba(207, 10, 10, 0.2);
+}
+
+.editable-field-btn {
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.editable-field-btn.save {
+  color: #16a34a;
+}
+
+.editable-field-btn.save:hover {
+  background: #f0fdf4;
+  border-color: #16a34a;
+}
+
+.editable-field-btn.cancel {
+  color: #dc2626;
+}
+
+.editable-field-btn.cancel:hover {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.social-editable-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .editable-field-input {
+    min-width: 80px;
+    max-width: 180px;
+    font-size: 13px;
+  }
+}
