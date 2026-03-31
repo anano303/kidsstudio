@@ -1,0 +1,184 @@
+.orders-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(207, 10, 10, 0.08);
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 229, 232, 0.7);
+  padding-bottom: 1rem;
+}
+
+.orders-title {
+  font-size: 2rem;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 1px;
+  font-family: "ALK Katerina", sans-serif;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(207, 10, 10, 0.05);
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 229, 232, 0.7);
+  border-bottom: 2px solid rgba(255, 229, 232, 1);
+  font-family: "ALK Katerina", sans-serif;
+}
+
+.orders-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 229, 232, 0.7);
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+}
+
+.orders-table tr {
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: rgba(255, 229, 232, 0.3);
+}
+
+.orders-table tr:hover {
+  background-color: rgba(255, 229, 232, 0.5);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+}
+
+.status-badge.success {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%);
+  color: #2e7d32;
+}
+
+.status-badge.error {
+  background-color: rgba(207, 10, 10, 0.1);
+  color: rgba(207, 10, 10, 1);
+}
+
+.status-badge.cancelled {
+  background-color: rgba(158, 158, 158, 0.1);
+  color: rgba(97, 97, 97, 1);
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
+
+.view-link {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background-color: rgba(207, 10, 10, 1);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.view-link:hover {
+  background-color: rgba(177, 8, 8, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(207, 10, 10, 0.3);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pagination-btn {
+  background-color: rgba(255, 229, 232, 0.7);
+  color: rgba(207, 10, 10, 1);
+  border: 1px solid rgba(255, 229, 232, 1);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: rgba(255, 229, 232, 1);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: rgba(207, 10, 10, 0.7);
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .orders-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.delivery-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.delivery-badge .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.delivery-badge.seller {
+  background-color: rgba(255, 229, 232, 0.5);
+  color: rgba(207, 10, 10, 0.8);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.delivery-badge.soulart {
+  background-color: rgba(255, 229, 232, 0.7);
+  color: rgba(207, 10, 10, 1);
+}
+
+.delivery-time {
+  font-size: 0.8em;
+  display: block;
+  margin-top: 2px;
+  color: #6b7280;
+}

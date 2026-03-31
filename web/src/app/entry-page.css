@@ -1,0 +1,73 @@
+/* Hide the header and footer when the entry page is shown */
+.entry-page-active header,
+.entry-page-active footer,
+.entry-page-active #chat-button,
+.entry-page-active .site-timer-container {
+  display: none !important;
+}
+
+/* Make the entry page take up the full viewport */
+.entry-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  /* background-color: #e91e63; */
+  background-image: url(/1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.entry-page h1,
+.entry-page h2 {
+  font-family: ALK Katerina;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(207, 10, 10, 1);
+}
+.arrowImage,
+.sect2 {
+  justify-self: center;
+  align-self: center;
+}
+.sec3 {
+  align-self: center;
+}
+.entry-button {
+  position: relative;
+  z-index: 99999;
+  margin-top: 0px;
+  padding: 8px 24px;
+
+  background: rgba(207, 10, 10, 1); /* ღილაკის გამჭვირვალე ფონი */
+  backdrop-filter: blur(12px); /* ბექგრაუნდის დაბლარი */
+  -webkit-backdrop-filter: blur(8px); /* Safari-ის მხარდაჭერა */
+
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  /* border-radius: 12px; */
+  border: 2px solid rgba(207, 10, 10, 0.5); /* წითელი პაწაწინა ხაზით */
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* ჩრდილი */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: ALK Life;
+  margin-bottom: 40px;
+}
+
+.entry-button:hover {
+  background: rgba(207, 10, 10, 0.053); /* hover-ზე ოდნავ მეტი სიფერადე */
+  transform: scale(1.02);
+}

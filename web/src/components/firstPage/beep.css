@@ -1,0 +1,74 @@
+.beep-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: inherit;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 50px;
+}
+
+.heart.pressed {
+  transform: rotate(-45deg) scale(0.95);
+}
+
+.star {
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%
+  );
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.star.pressed {
+  transform: scale(0.9);
+}
+
+.particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  opacity: 1;
+  pointer-events: none;
+  animation: flyOut 1.8s forwards;
+}
+
+@keyframes flyOut {
+  to {
+    transform: translate(var(--translateX), var(--translateY));
+    opacity: 0;
+  }
+}

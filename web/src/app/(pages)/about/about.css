@@ -1,0 +1,384 @@
+.about-container {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%); */
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background elements matching your site style */
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(233, 30, 99, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-container::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(207, 10, 10, 0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  /* background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(233, 30, 99, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.04); */
+  backdrop-filter: blur(10px);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-title {
+  font-family: "ALK Katerina";
+  font-weight: 400;
+  font-style: regular;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  color: rgba(207, 10, 10, 1);
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.logo-decoration {
+  margin: 2rem auto;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-logo {
+  animation: gentleFloat 6s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.floating-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.logo-wrapper.pressed {
+  transform: scale(0.95);
+  filter: brightness(1.2) drop-shadow(0 0 20px rgba(233, 30, 99, 0.6));
+}
+
+.about-logo {
+  width: 300px !important;
+  height: 200px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(233, 30, 99, 0.15));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-logo:hover {
+  filter: drop-shadow(0 12px 20px rgba(233, 30, 99, 0.25));
+  transform: scale(1.02);
+}
+
+.sound-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sound-particles span {
+  position: absolute;
+  font-size: 2rem;
+  animation: particleExplode 1s ease-out forwards;
+}
+
+.sound-particles span:nth-child(1) {
+  animation-delay: 0s;
+  --angle: 45deg;
+}
+
+.sound-particles span:nth-child(2) {
+  animation-delay: 0.1s;
+  --angle: 135deg;
+}
+
+.sound-particles span:nth-child(3) {
+  animation-delay: 0.2s;
+  --angle: 225deg;
+}
+
+.sound-particles span:nth-child(4) {
+  animation-delay: 0.3s;
+  --angle: 315deg;
+}
+
+@keyframes particleExplode {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(calc(cos(var(--angle)) * 80px))
+      translateY(calc(sin(var(--angle)) * 80px)) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(calc(cos(var(--angle)) * 120px))
+      translateY(calc(sin(var(--angle)) * 120px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-12px) rotate(-1deg);
+  }
+}
+
+.about-logo:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  font-family: "ALK Life", "Georgia", serif;
+  line-height: 1.8;
+  color: #37241e;
+  margin-bottom: 2rem;
+}
+
+.brand-intro {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.brand-intro h2 {
+  font-family: "ALK Katerina", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  white-space: wrap;
+}
+
+.brand-intro span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.about-section p {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.about-section.highlight p {
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  text-align: center;
+  font-style: italic;
+}
+
+.quote,
+.cta-highlight {
+  background: linear-gradient(135deg, #ffffff 0%, #ffe5e8 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: "ALK Katerina", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  position: relative;
+}
+
+.quote::before,
+.cta-highlight::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #e91e63, #cf0a0a, #e91e63);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.about-section.final {
+  text-align: center;
+  /* margin: 2.5rem 0; */
+}
+
+.about-section.final p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-section.final strong {
+  font-weight: 700;
+}
+
+.call-to-action {
+  margin-bottom: 15%;
+}
+
+.call-to-action p {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  margin-bottom: 1.5rem;
+  display: inline;
+}
+.creators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin-top: 2rem;
+}
+.creators img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.25);
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 1.1rem;
+  }
+
+  .logo-decoration {
+    width: 240px;
+    height: 160px;
+  }
+
+  .logo-wrapper {
+    width: 240px;
+    height: 160px;
+  }
+
+  .sound-particles span {
+    font-size: 1.5rem;
+  }
+
+  .brand-intro h2 {
+    display: inline;
+    font-size: 1.8rem;
+  }
+
+  .brand-intro p {
+    font-size: 1.1rem;
+    display: inline;
+  }
+
+  .about-section p {
+    /* font-size: 1rem; */
+    text-align: left;
+  }
+
+  .quote {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .cta-highlight {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem 0;
+  }
+
+  .about-content {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .about-title {
+    font-size: 1.3rem;
+  }
+
+  .brand-intro h2 {
+    font-size: 1.5rem;
+  }
+}
